@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HALIA-1 — направитель</title>
+  <meta name="description" content="Прототип направителя HALIA-1: трёхмерный просмотр, чертёж и файлы для печати. Не медицинское изделие.">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="mast">
+    <div>
+      <h1 class="word">HALIA<i>-1</i></h1>
+      <p class="lede">Направитель для чрескожной дистальной остеотомии первой плюсневой кости. Правая стопа, смещение головки 8&nbsp;мм, канал спицы 102°.</p>
+    </div>
+    <p class="stamp"><strong>Не медицинское изделие</strong>Инженерный прототип формы.<br>Не стерильно. Не для операций.<br>Смола не имплантационный материал.</p>
+  </header>
+
+  <section class="model" id="model">
+    <div id="stage">
+      <p class="status" id="status">читаю модель</p>
+      <div class="legend" aria-hidden="true">
+        <span><i class="swatch" style="background:#2a5984"></i>рамка</span>
+        <span><i class="swatch" style="background:#b7bbbf"></i>язык</span>
+        <span><i class="swatch" style="background:#c6922e"></i>лопатка</span>
+        <span><i class="swatch" style="background:#1c7c80"></i>турель</span>
+        <span><i class="swatch" style="background:#9c5528"></i>клипса</span>
+        <span><i class="swatch" style="background:#d42722"></i>спицы 1,6</span>
+      </div>
+    </div>
+    <div class="deck">
+      <p class="hint">Левая кнопка — вращать, колесо — приближать, правая — сдвигать. Двойной щелчок возвращает общий вид. Клавиши 1–4 — те же виды.</p>
+      <div class="tools">
+        <button class="ctrl" id="view-home" type="button">Общий</button>
+        <button class="ctrl" id="view-top" type="button">Сверху</button>
+        <button class="ctrl" id="view-side" type="button">Сбоку</button>
+        <button class="ctrl" id="view-end" type="button">С торца</button>
+        <button class="ctrl" id="view-spin" type="button" aria-pressed="false">Вращать</button>
+        <label class="slide">Разбор
+          <input id="explode" type="range" min="0" max="1" step="0.01" value="0" aria-label="Разобрать сборку">
+        </label>
+        <button class="ctrl" id="tog-bone" type="button" aria-pressed="true">Кость</button>
+        <button class="ctrl" id="tog-wire" type="button" aria-pressed="true">Спицы</button>
+        <button class="ctrl" id="tog-screw" type="button" aria-pressed="true">Винты</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="sheet">
+    <nav class="rail" aria-label="Разделы">
+      <ol>
+        <li><a href="#model"><span>01</span>Модель</a></li>
+        <li><a href="#device"><span>02</span>Устройство</a></li>
+        <li><a href="#sizes"><span>03</span>Размеры</a></li>
+        <li><a href="#print"><span>04</span>Печать</a></li>
+        <li><a href="#files"><span>05</span>Файлы</a></li>
+        <li><a href="#film"><span>06</span>Ролик</a></li>
+        <li><a href="#sources"><span>07</span>Источники</a></li>
+      </ol>
+    </nav>
+
+    <div class="prose">
+      <section id="device">
+        <h2><span class="kicker">02</span>Устройство</h2>
+        <p>Исходный направитель Олейника ведёт одну спицу под 102° к оси кости и выпускает её из латеральной коры на 10&nbsp;мм проксимальнее распила. Смещение головки у него постоянное, вторую спицу ставят от руки. HALIA-1 сохраняет этот номинал и добавляет то, чего в опубликованной конструкции нет.</p>
+        <dl class="pairs">
+          <div>
+            <dt>Смещение</dt>
+            <dd>0–12&nbsp;мм, шкала с шагом 1&nbsp;мм, упоры на обоих концах. На модели выставлено 8&nbsp;мм: лицо лопатки стоит на 8&nbsp;мм латеральнее медиальной коры расчётной кости.</dd>
+          </div>
+          <div>
+            <dt>Наклон</dt>
+            <dd>Фиксатор на 6°, 12° и 18°, то есть угол канала 96° / 102° / 108°. Номинал 12° оставляет опубликованные 102° и выход ровно в 10&nbsp;мм. На 6° выход уходит на 12,3&nbsp;мм проксимальнее распила, на 18° — на 7,6&nbsp;мм. Шарнир лежит на номинальной оси спицы, поэтому канал не сходит со спицы.</dd>
+          </div>
+          <div>
+            <dt>Вторая спица</dt>
+            <dd>Параллельный канал в 10&nbsp;мм дистальнее первого. Клипса надевается на уже стоящую первую спицу со свободного конца и задаёт вторую, вместо свободной постановки от руки.</dd>
+          </div>
+          <div>
+            <dt>Язык</dt>
+            <dd>Паз открыт проксимально: язык снимается дистально и не тянет за собой спицу. Три ширины, S / M / L, садятся на одну рамку. На сборке — язык M.</dd>
+          </div>
+          <div>
+            <dt>Высота</dt>
+            <dd>Вилка сверху и снизу повторяет кость Ø14 с запасом на мягкие ткани. Это грубая отметка, не зажим: положение по высоте всё равно смотрят на боковом снимке.</dd>
+          </div>
+          <div>
+            <dt>Портал</dt>
+            <dd>Шейка языка и лопатка стоят рядом, около 4&nbsp;мм вдоль кости. Прототип рассчитан на разрез около 5–6&nbsp;мм, а не на 3–4&nbsp;мм исходной методики.</dd>
+          </div>
+        </dl>
+        <p class="quiet">Грубая геометрическая оценка, не назначение: Δ ≈ arctan(T / 55&nbsp;мм). Смещение 6 / 8 / 10 / 12&nbsp;мм даёт 6,2° / 8,3° / 10,3° / 12,3°. DMAA, пронация и остеотомия Akin этой моделью не задаются.</p>
+      </section>
+
+      <section id="sizes">
+        <h2><span class="kicker">03</span>Размеры</h2>
+        <p>Оси правой стопы: +X дистально, +Y медиально, +Z дорсально. Остеотомия на x&nbsp;=&nbsp;0. Левые файлы — зеркало относительно плоскости XZ. Мастер-модель — STEP; если лист и модель разойдутся, верна модель.</p>
+        <table>
+          <thead><tr><th>Величина</th><th class="num">Значение</th></tr></thead>
+          <tbody>
+            <tr><td>Угол канала к проксимальной оси, номинал</td><td class="num">102°</td></tr>
+            <tr><td>Фиксатор наклона</td><td class="num">6° / 12° / 18°</td></tr>
+            <tr><td>Углы канала</td><td class="num">96° / 102° / 108°</td></tr>
+            <tr><td>Выход спицы 1 при 12° / 6° / 18°</td><td class="num">10 / 12,3 / 7,6 мм</td></tr>
+            <tr><td>Шаг двух спиц вдоль кости</td><td class="num">10 мм</td></tr>
+            <tr><td>Спица / канал в печати / развёртка</td><td class="num">1,6 / Ø1,80 / 1,70–1,75</td></tr>
+            <tr><td>Смещение головки</td><td class="num">0–12 мм, на сборке 8</td></tr>
+            <tr><td>Шаг шкалы / зазор упора и скольжения</td><td class="num">1 мм / 0,25 мм</td></tr>
+            <tr><td>Расчётная кость</td><td class="num">Ø14</td></tr>
+            <tr><td>Лицо лопатки</td><td class="num">Y = 7 − T</td></tr>
+            <tr><td>Язык S / M / L, полутолщина</td><td class="num">1,00 / 1,20 / 1,45</td></tr>
+            <tr><td>Конец паза / конец языка</td><td class="num">x = −8 / −5,2</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="print">
+        <h2><span class="kicker">04</span>Печать и стенд</h2>
+        <p>MSLA, слой 0,05&nbsp;мм, жёсткая смола для прототипа. Канал печатается Ø1,80&nbsp;мм и разворачивается: усадку смолы в номинал не закладывать. В файлах <code>print_*.stl</code> ориентация уже стоит на стол.</p>
+        <table>
+          <thead><tr><th>Деталь</th><th>Как лежит</th><th class="num">Габарит, мм</th></tr></thead>
+          <tbody>
+            <tr><td>Рамка</td><td>ось скольжения вверх</td><td class="num">66,0 × 23,0 × 58,1</td></tr>
+            <tr><td>Лопатка</td><td>ось скольжения вверх</td><td class="num">4,5 × 11,6 × 33,5</td></tr>
+            <tr><td>Турель</td><td>каналы вертикально</td><td class="num">50,7 × 17,9 × 58,8</td></tr>
+            <tr><td>Клипса</td><td>каналы вертикально</td><td class="num">24,0 × 10,3 × 19,8</td></tr>
+            <tr><td>Язык S / M / L</td><td>ось скольжения вверх</td><td class="num">44,8 × 12–13 × 17</td></tr>
+          </tbody>
+        </table>
+        <p>Крепёж не печатается. M3×25 и гайка — винт смещения, гайка входит в дорсальное окно лопатки. M3×10 и гайка — фиксатор языка, гайка в плантарном окне полки. M3×12 и гайка — фиксатор угла, через отверстие 96°, 102° или 108°. M3×8 — ось шарнира, одна, только сверху: сквозной винт пересёк бы спицу.</p>
+        <p>Порядок ниже — для оправки Ø14, не методика операции. Оправка лежит в <code>export/fixture/</code> и в комплект стопы не входит.</p>
+        <ol class="bench">
+          <li>Язык M в паз оправки, фланец на полку рамки, винт M3×10.</li>
+          <li>Лопатка в канал, винт M3×25. Деление, которое вышло на торец рамки, и есть смещение в миллиметрах.</li>
+          <li>Турель на ось, винт M3×8 сверху. Отверстие 102° совместить со стойкой и зажать M3×12.</li>
+          <li>Спица 1,6&nbsp;мм в первый канал, через вилку, до выхода на латеральной стороне оправки.</li>
+          <li>Клипсу надеть на свободный конец первой спицы. Вторая спица — через клипсу и второй канал: параллельно, на 10&nbsp;мм дистальнее.</li>
+        </ol>
+      </section>
+
+      <section id="files">
+        <h2><span class="kicker">05</span>Файлы</h2>
+        <p>Комплект собирает чертёж, STEP, STL для печати обеих стоп, оправку, ролик и описание. Отдельные ссылки — если нужно одно.</p>
+        <table class="files">
+          <thead><tr><th>Файл</th><th>Что внутри</th><th class="num">Объём</th></tr></thead>
+          <tbody>
+            <tr><td><a href="export/HALIA-1_komplekt.zip" download>HALIA-1_komplekt.zip</a></td><td>чертёж, модели, печать, ролик, описание</td><td class="num">7,5 МБ</td></tr>
+            <tr><td><a href="export/drawing/HALIA-1_drawing.pdf" download>Чертёж, 3 листа А3</a></td><td>общий вид, проекции, схема М&nbsp;3:1</td><td class="num">1,7 МБ</td></tr>
+            <tr><td><a href="export/drawing/HALIA-1_schematic.dxf" download>Схема DXF</a></td><td>управляющие размеры, миллиметры модели</td><td class="num">39 КБ</td></tr>
+            <tr><td><a href="export/step/HALIA-1_assembly.step" download>Сборка STEP, правая</a></td><td>мастер-модель</td><td class="num">1,5 МБ</td></tr>
+            <tr><td><a href="export/step/HALIA-1_assembly_LEFT.step" download>Сборка STEP, левая</a></td><td>зеркало</td><td class="num">1,4 МБ</td></tr>
+            <tr><td><a href="export/video/HALIA-1.mp4" download>Ролик</a></td><td>27,5 с, сборка и разбор</td><td class="num">4,7 МБ</td></tr>
+            <tr><td><a href="README.md" download>Описание</a></td><td>источники, проверки, печать</td><td class="num">12 КБ</td></tr>
+            <tr><td><a href="export/validation.json" download>Протокол геометрии</a></td><td>результаты проверок генератора</td><td class="num">6 КБ</td></tr>
+          </tbody>
+        </table>
+        <p>STL на стол, правая стопа. Левая — те же имена с суффиксом <code>_LEFT</code> в <code>export/stl/</code>.</p>
+        <table class="files">
+          <thead><tr><th>Деталь</th><th></th><th class="num"></th></tr></thead>
+          <tbody>
+            <tr><td><a href="export/stl/print_frame.stl" download>print_frame.stl</a></td><td>рамка</td><td class="num">249 КБ</td></tr>
+            <tr><td><a href="export/stl/print_blade.stl" download>print_blade.stl</a></td><td>лопатка со шкалой</td><td class="num">46 КБ</td></tr>
+            <tr><td><a href="export/stl/print_turret.stl" download>print_turret.stl</a></td><td>турель, два канала</td><td class="num">300 КБ</td></tr>
+            <tr><td><a href="export/stl/print_clip.stl" download>print_clip.stl</a></td><td>клипса второй спицы</td><td class="num">142 КБ</td></tr>
+            <tr><td><a href="export/stl/print_tongue_S.stl" download>print_tongue_S.stl</a></td><td>язык S</td><td class="num">41 КБ</td></tr>
+            <tr><td><a href="export/stl/print_tongue_M.stl" download>print_tongue_M.stl</a></td><td>язык M</td><td class="num">41 КБ</td></tr>
+            <tr><td><a href="export/stl/print_tongue_L.stl" download>print_tongue_L.stl</a></td><td>язык L</td><td class="num">40 КБ</td></tr>
+            <tr><td><a href="export/fixture/print_fixture_shaft_dorsal.stl" download>оправка, верх</a></td><td>вал Ø14, только стенд</td><td class="num">87 КБ</td></tr>
+            <tr><td><a href="export/fixture/print_fixture_shaft_plantar.stl" download>оправка, низ</a></td><td>вал Ø14, только стенд</td><td class="num">87 КБ</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="film">
+        <h2><span class="kicker">06</span>Ролик</h2>
+        <div class="film">
+          <video controls preload="metadata" poster="export/video/still_hero.png">
+            <source src="export/video/HALIA-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">27,5 с. Общий оборот, узел остеотомии, разобранные детали. Кость на ролике полупрозрачная, спицы красные.</p>
+      </section>
+
+      <section id="sources" class="sources">
+        <h2><span class="kicker">07</span>Источники</h2>
+        <p>Чертежей патента с размерами в открытом доступе нет. В статье 2025 года патент указан как RU&nbsp;281344&nbsp;C1, номер выглядит неполным. Полезная модель RU&nbsp;229923&nbsp;U1 в той же статье — другой инструмент. Модель собрана по опубликованному описанию и от него отличается.</p>
+        <p>Олейник и соавт. Направитель для чрескожной коррекции hallux valgus. Травматология и ортопедия России. 2023;29(3):65–72. <a href="https://doi.org/10.17816/2311-2905-8427">doi 10.17816/2311-2905-8427</a>.</p>
+        <p>Беленький и соавт. Тот же журнал. 2025;31(3):61–69. <a href="https://doi.org/10.17816/2311-2905-17726">doi 10.17816/2311-2905-17726</a>. С направителем медиана времени операции 25 минут против 45, рентгеноскопия 46&nbsp;с против 112&nbsp;с, доза 0,30&nbsp;мГр против 0,79&nbsp;мГр. Поправка углов статистически не различалась.</p>
+        <p>Геометрия проверяется скриптом <code>cad/halia_gen.py</code>: угол 102,00°, выход первой спицы в точке (−10, −7, 0), обе спицы по центру каналов на трёх наклонах, каждая деталь для печати — одно тело.</p>
+        <div class="colophon">
+          <div>
+            <p class="alert">Не медицинское изделие</p>
+            <p>Прототип для проверки формы, посадки и печати</p>
+          </div>
+          <div>
+            <p>HALIA-1 · миллиметры · правая стопа</p>
+            <p>Шрифты Cormorant Garamond и IBM Plex Mono, лицензия OFL. Просмотр на three.js, лицензия MIT.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script type="importmap">
+    { "imports": { "three": "./assets/vendor/three.module.js" } }
+  </script>
+  <script type="module" src="assets/viewer.js"></script>
+  <noscript><p style="padding:24px">Для трёхмерного просмотра нужен JavaScript. Файлы и чертёж по ссылкам выше скачиваются и без него.</p></noscript>
+</body>
+</html>

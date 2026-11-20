@@ -1,0 +1,309 @@
+{
+  "name": "HALIA-1",
+  "units": "mm",
+  "foot": "right (LEFT files are mirrored)",
+  "hole_angle_deg": 102.0,
+  "obliquity_deg": 12.0,
+  "obliquity_options_deg": [
+    6.0,
+    12.0,
+    18.0
+  ],
+  "hole_angle_options_deg": [
+    96,
+    102,
+    108
+  ],
+  "wire_exit_proximal_of_cut_mm": 10.0,
+  "wire_spacing_along_shaft_mm": 10.0,
+  "translation_in_assembly_mm": 8.0,
+  "translation_range_mm": [
+    0,
+    12.0
+  ],
+  "design_shaft_diameter_mm": 14.0,
+  "wire_diameter_mm": 1.6,
+  "printed_bore_mm": 1.8,
+  "ream_bore_mm": [
+    1.7,
+    1.75
+  ],
+  "hinge_xy": [
+    -14.50619910740447,
+    14.2
+  ],
+  "angle_boss_xy": [
+    -47.96272942534738,
+    51.35724127386972
+  ],
+  "index_y": 17.2,
+  "paddle_face_y_at_T8": -1.0,
+  "checks": [
+    {
+      "name": "cylinder helper",
+      "ok": true,
+      "detail": "bbox=(-0.0, -1.0, -1.0, 10.0, 1.0, 1.0)"
+    },
+    {
+      "name": "wire 1 lateral exit",
+      "ok": true,
+      "detail": "[-10.0, -7.0, 0.0]  (10 mm proximal of the osteotomy)"
+    },
+    {
+      "name": "hole angle vs IM axis",
+      "ok": true,
+      "detail": "102.00\u00b0 (target 102\u00b0)"
+    },
+    {
+      "name": "volume frame",
+      "ok": true,
+      "detail": "5549 mm\u00b3"
+    },
+    {
+      "name": "volume tongue M",
+      "ok": true,
+      "detail": "476 mm\u00b3"
+    },
+    {
+      "name": "volume blade",
+      "ok": true,
+      "detail": "567 mm\u00b3"
+    },
+    {
+      "name": "volume turret",
+      "ok": true,
+      "detail": "5053 mm\u00b3"
+    },
+    {
+      "name": "volume clip",
+      "ok": true,
+      "detail": "2687 mm\u00b3"
+    },
+    {
+      "name": "paddle face Y",
+      "ok": true,
+      "detail": "minY=-1.00, target -1.00 at T=8.0"
+    },
+    {
+      "name": "gap blade-frame",
+      "ok": true,
+      "detail": "0.25 mm (allowed 0.12\u20130.55)"
+    },
+    {
+      "name": "gap tongue-frame",
+      "ok": true,
+      "detail": "0.15 mm (allowed 0.08\u20131.2)"
+    },
+    {
+      "name": "gap turret-frame",
+      "ok": true,
+      "detail": "0.35 mm (allowed 0.05\u20132.5)"
+    },
+    {
+      "name": "gap clip-frame",
+      "ok": true,
+      "detail": "3.79 mm (allowed 2.0\u201380)"
+    },
+    {
+      "name": "gap tongue-blade",
+      "ok": true,
+      "detail": "0.55 mm (allowed 0.4\u201320)"
+    },
+    {
+      "name": "gap turret-tongue",
+      "ok": true,
+      "detail": "3.02 mm (allowed 0.25\u201340)"
+    },
+    {
+      "name": "gap turret-blade",
+      "ok": true,
+      "detail": "2.86 mm (allowed 0.4\u201340)"
+    },
+    {
+      "name": "wire1 misses other parts",
+      "ok": true,
+      "detail": "min dist 1.75 mm"
+    },
+    {
+      "name": "wire1 centered in bore",
+      "ok": true,
+      "detail": "dist to turret 0.90 mm"
+    },
+    {
+      "name": "wire2 misses other parts",
+      "ok": true,
+      "detail": "min dist 1.49 mm"
+    },
+    {
+      "name": "wire2 centered in bore",
+      "ok": true,
+      "detail": "dist to turret 0.90 mm"
+    },
+    {
+      "name": "wire 1 in the fork",
+      "ok": true,
+      "detail": "dist to tongue 1.75 mm"
+    },
+    {
+      "name": "tick 0 is a cut",
+      "ok": true,
+      "detail": "point (3.25, 17.2, 2.2)"
+    },
+    {
+      "name": "blade solid beside tick",
+      "ok": true,
+      "detail": "point (2.3, 18.0, 0.0)"
+    },
+    {
+      "name": "stop gap at 0 mm",
+      "ok": true,
+      "detail": "0.25 mm"
+    },
+    {
+      "name": "stop gap at 12 mm",
+      "ok": true,
+      "detail": "0.25 mm"
+    },
+    {
+      "name": "turret clears frame at 6\u00b0",
+      "ok": true,
+      "detail": "gap 0.34 mm"
+    },
+    {
+      "name": "wire 1 follows bore at 6\u00b0",
+      "ok": true,
+      "detail": "bore dist 0.90 mm, lateral exit x=-12.28 mm"
+    },
+    {
+      "name": "wire 1 in fork at 6\u00b0",
+      "ok": true,
+      "detail": "dist 1.75 mm"
+    },
+    {
+      "name": "wire 1 misses frame/blade at 6\u00b0",
+      "ok": true,
+      "detail": "4.60 mm"
+    },
+    {
+      "name": "exit stays near 10 mm at 6\u00b0",
+      "ok": true,
+      "detail": "12.3 mm proximal of the cut"
+    },
+    {
+      "name": "turret clears frame at 18\u00b0",
+      "ok": true,
+      "detail": "gap 0.34 mm"
+    },
+    {
+      "name": "wire 1 follows bore at 18\u00b0",
+      "ok": true,
+      "detail": "bore dist 0.90 mm, lateral exit x=-7.62 mm"
+    },
+    {
+      "name": "wire 1 in fork at 18\u00b0",
+      "ok": true,
+      "detail": "dist 1.70 mm"
+    },
+    {
+      "name": "wire 1 misses frame/blade at 18\u00b0",
+      "ok": true,
+      "detail": "4.60 mm"
+    },
+    {
+      "name": "exit stays near 10 mm at 18\u00b0",
+      "ok": true,
+      "detail": "7.6 mm proximal of the cut"
+    },
+    {
+      "name": "tongue S fits frame",
+      "ok": true,
+      "detail": "gap 0.15 mm, vol 378"
+    },
+    {
+      "name": "tongue L fits frame",
+      "ok": true,
+      "detail": "gap 0.15 mm, vol 648"
+    }
+  ],
+  "print_files": [
+    {
+      "file": "export/stl/print_frame.stl",
+      "part": "frame",
+      "bed_orientation": "Yup",
+      "size_mm": [
+        65.96,
+        23.0,
+        58.06
+      ]
+    },
+    {
+      "file": "export/stl/print_blade.stl",
+      "part": "blade",
+      "bed_orientation": "Yup",
+      "size_mm": [
+        4.5,
+        11.6,
+        33.45
+      ]
+    },
+    {
+      "file": "export/stl/print_turret.stl",
+      "part": "turret",
+      "bed_orientation": "bore",
+      "size_mm": [
+        50.71,
+        17.9,
+        58.83
+      ]
+    },
+    {
+      "file": "export/stl/print_clip.stl",
+      "part": "clip",
+      "bed_orientation": "bore",
+      "size_mm": [
+        23.95,
+        10.3,
+        19.81
+      ]
+    },
+    {
+      "file": "export/stl/print_tongue_S.stl",
+      "part": "tongue_S",
+      "bed_orientation": "Yup",
+      "size_mm": [
+        44.8,
+        12.25,
+        17.2
+      ]
+    },
+    {
+      "file": "export/stl/print_tongue_M.stl",
+      "part": "tongue_M",
+      "bed_orientation": "Yup",
+      "size_mm": [
+        44.8,
+        12.85,
+        17.4
+      ]
+    },
+    {
+      "file": "export/stl/print_tongue_L.stl",
+      "part": "tongue_L",
+      "bed_orientation": "Yup",
+      "size_mm": [
+        44.8,
+        13.45,
+        17.65
+      ]
+    }
+  ],
+  "hardware": [
+    "M3x25 socket head \u2014 translation screw, 1",
+    "M3 nut \u2014 translation, 1 (slides into the dorsal mouth of the paddle block)",
+    "M3x10 socket head \u2014 tongue lock, 1",
+    "M3 nut \u2014 tongue lock, 1 (plantar mouth of the shelf)",
+    "M3x12 socket head \u2014 angle lock, 1 (through the 96, 102 or 108 hole)",
+    "M3 nut \u2014 angle lock, 1",
+    "M3x8 socket head \u2014 hinge axle, 1 (dorsal clevis only; a through-screw would cross the wire)"
+  ]
+}
